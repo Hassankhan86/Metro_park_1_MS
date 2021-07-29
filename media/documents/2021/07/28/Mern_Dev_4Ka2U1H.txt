@@ -1,0 +1,202 @@
+Ali Ijaz
+Python Django Developer	
+HTML
+CSS
+BOOTSTRAP 
+MATERIALISE 
+Selenium 
+Pyauto gui
+WordPress 
+
+years of experience 1
+Django-Blog by Net-Ninja:
+CV builder:
+HTML, CSS, BOOTSTRAP, Java Script, Python Django
+InstaBot:
+HTML, CSS, BOOTSTRAP, Java Script, Python Django, selenium,
+ERP:
+HTML, CSS, BOOTSTRAP, Java Script, Python Django, ajax  ....Continue
+Houzcalls:
+HTML, CSS, Bootstrap, Javascript, Php
+Hospital Management system:
+HTML, CSS, BOOTSTRAP, Java Script, Python Django, ajax 
+
+------------------------------------------
+Hassan Jamal Khan
+Python Django Developer	
+HTML
+CSS
+BOOTSTRAP 
+Selenium 
+PyAutoGui
+
+Five Month of Experience 
+Django-Blog by Net-Ninja:
+CV builder:
+HTML, CSS, BOOTSTRAP, Java Script, Python Django
+InstaBot:
+HTML, CSS, BOOTSTRAP, Java Script, Python Django, selenium,
+ERP:
+HTML, CSS, BOOTSTRAP, Java Script, Python Django, ajax  ....Continue
+
+------------------------------------------
+
+Muhammad Abdurrahman Sulehria
+MERN Stack Developer
+Nodejs
+Express
+MongoDB "
+Other Technologies:
+Bootstrap
+Html
+Css
+JS
+Laravel
+Angular2
+Game Development(unity3D)
+years of experience 2 months (in office) 1+ year (free lancing)
+"Frazapparel: A clothing brand.
+Tech Stack: bootstrap, html, JS
+Simply Logistics Services: logistics website.
+Tech Stack: Bootstrap, html, JS”
+
+------------------------------------------
+
+Usman Bazmi
+MERN Stack Developer
+JavaScript(es5,es6)
+React Js 
+html 
+css
+bootstrap
+Projects: one project in JavaScript, One Project in React js , Second Project Continue
+Experience: 2 months at system junctions
+Tech Stack: PHP(basics)
+
+------------------------------------------
+
+Bilal Shuja
+Starting Date in System Junctions: 22 April 2021
+MERN Stack Developer
+React (Basics)
+projects : Simple Blog page (from net ninja)
+
+pervious tech: Vue.js, C# ( 2 months experience)
+project: Hostel Management System
+
+------------------------------------------
+M.Jawad
+MERN STACK Internee
+Hands on: HTML,CSS & Javascript (Continue)
+
+------------------------------------------
+
+Asad Ali	
+MERN Stack Developer	
+Nodejs
+Express
+React
+React Native
+ASP.NET / ASP.NETCore
+MongoDB "	
+years of experience 2+	
+"Fotisto: A platform for photographers.
+Tech Stack: .NET, HTML, Bootstrap
+SimplifySufi: An mCommerce mobile application.
+Tech Stack: React Native
+Vonza: Web application development platform.
+Tech Stack: Node, React, MongoDB"
+
+
+------------------------------------------
+
+Ghulam Muhammad 
+
+Html 
+Css
+Javascript 
+React beginner
+
+experience 1.5 month
+
+------------------------------------------
+
+Muhammad Saad Ullah Ashraf
+MERN Stack Developer
+ReactJs
+Other Technologies:
+Bootstrap
+Html
+Css
+JS
+Laravel
+Angular2
+Game Development(unity3D)
+years of experience 2 months (in office) 1+ year (free lancing)
+"Frazapparel: A clothing brand.
+Tech Stack: bootstrap, html, JS
+Simply Logistics Services: logistics website.
+Tech Stack: Bootstrap, html, JS”
+
+------------------------------------------
+
+Mohammad Aziz	
+
+MERN Stack Developer :
+ -
+ -
+ React (JSX, Hooks, Redux, Router)
+ -
+
+Technologies under belt :
+JavaScript, TypeScript, HTML/HTML5, JSON server  
+CSS, SASS, Material-UI, Materialise CSS
+
+
+Years of experience : 1+
++ Projects
+  - EdgeLedger Website :
+        EdgeLedger is a fully responsive website with is made with following technologies :
+        HTML, CSS, SASS, JavaScript
+
+  - CRWN Clothing : 
+        Crwn clothing is an online e-com webstore made with :
+        React, React-Router, JSX, Material-ui
+
+  - NotesT :
+        Notes is a multi user web app with every user with their own notes, its made with :
+        React, Router, Material-ui, Jsx, Typescript, JSON-server, Masonry Grid
+   
+  - Blog Dojo :
+        Blog Dojo is a blog writing and posting website 
+        React, React-router, material-ui, JSON-server, SASS
+
+  - React_tasker : 
+        This is a task tracking web app with reminder features its made via :
+        React, Router, Materialise CSS
+
+  - Monster Rolodex : 
+        This is an optimized searching website meant to showcase react's Virtual DOM
+
+------------------------------------------
+Abdullah Laeeq	
+MERN Stack Developer :
+ -
+ -
+ -
+ -
+
+Technologies under belt :
+HTML/HTML5, CSS, JavaScript
+
+
+Months of experience : 4+
++ Projects
+   - HBT Hotel Website : 
+         HBT is a fully responsive website, made via :
+         HTML, CSS
+ 
+   - Notes Taker:
+         Notes is a web app for note taking, made with :
+         JavaScript, HTML
+------------------------------------------

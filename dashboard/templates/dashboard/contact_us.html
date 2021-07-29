@@ -1,0 +1,24 @@
+{% extends 'base_template.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+    <form class="form-group">
+        <label>Your Name (required)</label>
+        <input type="text" class="form-control" name="contact_name">
+        <label>Your Telephone Number (required)</label>
+        <input type="text" class="form-control" name="contact_contact_number">
+        <label>Your Email Address (required)</label>
+        <input type="text" class="form-control" name="contact_email">
+        <label>Subject</label>
+        <input type="text" class="form-control" name="contact_subject">
+         <label>Your Message</label>
+        <textarea class="form-control" rows="7" name="contact_message"></textarea>
+{#        <input type="text" class="form-control" name="contact_message">#}
+        <br>
+        <button type="submit" class="btn btn-primary float-right">Submit</button>
+
+    </form>
+    </div>
+
+{% endblock %}

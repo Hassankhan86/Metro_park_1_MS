@@ -1,0 +1,146 @@
+
+{% extends 'base_template.html' %}
+{% load static %}
+
+{% block header %}
+
+
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        {#<h1 style="text-align: center;"> Your Slot is Booked </h1>#}
+
+    {% for cus in customers %}
+
+
+        <div class="row">
+            <div class="col-md">
+                <div class="card card-body">
+                    <div class="card-header bg-secondary " style="text-align: center">
+                        <b style="color: white">    Customer Information</b>
+                    </div>
+                    {#                <h5>Customer: </h5>#}
+                    {#                <hr>#}
+                    <div class="card-body">
+                        {#    <h5 class="card-title">Customer Information</h5>#}
+
+                            <p class="card-text"><b>Customer Name</b> : {{ cus.customer_name }}</p>
+                            <p class="card-text"><b>Customer Id</b> : {{ cus.customer_id }}</p>
+
+                        <a href="{% url 'dashboard:update_info' cust.id %}" class="btn" style="float: right;background-color: #2D71B3;color: white">Go Update</a>
+                    </div>
+                    {#                <a class="btn btn-outline-info  btn-sm btn-block" href="">Update Customer</a>#}
+                    {#                <a class="btn btn-outline-danger  btn-sm btn-block" href="">Delete Customer</a>#}
+
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="card card-body">
+                    <div class="card-header bg-secondary " style="text-align: center">
+                        <b style="color: white" >    Contact Information</b>
+                    </div>
+                    {#                <h5>Customer: </h5>#}
+                    {#                <hr>#}
+                    <div class="card-body">
+                        {#    <h5 class="card-title">Customer Information</h5>#}
+                        <p class="card-text"><b>Phone No</b> : {{ cus.customer_phone }}</p>
+                        <p class="card-text"><b>Email Address</b> : {{ cus.customer_email }}</p>
+{#{{ user.username }}<br>#}
+{#                         {{ user.email }}#}
+
+                        {#                        <p class="card-text">Customer Id : {{ customers.customer_phone }}</p>#}
+
+                        {#                        <a href="#" class="btn btn-primary">Go somewhere</a>#}
+                    </div>
+                    {#                <a class="btn btn-outline-info  btn-sm btn-block" href="">Update Customer</a>#}
+                    {#                <a class="btn btn-outline-danger  btn-sm btn-block" href="">Delete Customer</a>#}
+
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="card card-body">
+                    <div class="card-header bg-secondary " style="text-align: center">
+                        <b style="color: white"       > Vehicle Information </b>
+                    </div>
+                    {#                <h5>Customer: </h5>#}
+                    {#                <hr>#}
+                    <div class="card-body">
+                        {#    <h5 class="card-title">Customer Information</h5>#}
+                        <p class="card-text"><b>Vehicle Name</b> : {{ cus.vehicle_name }}</p>
+                        <p class="card-text"><b>Vehicle Number</b> : {{ cus.vehicle_number }}</p>
+                        <p class="card-text"><b>Vehicle Color</b> : {{ cus.vehicle_color }}</p>
+                        {#                        <p class="card-text">Vehicle Documents : {{ customers.vehicle_documents }}</p>#}
+
+                        {#                        <a href="#" class="btn btn-primary">Go somewhere</a>#}
+                    </div>
+                    {#                <a class="btn btn-outline-info  btn-sm btn-block" href="">Update Customer</a>#}
+                    {#                <a class="btn btn-outline-danger  btn-sm btn-block" href="">Delete Customer</a>#}
+
+                </div>
+            </div>
+        </div>
+ {% endfor %}
+
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="card card-body">
+                    <form method="get">
+                        {#                {{ myFilter.form }}#}
+                        {#		    {% for field in filter.form %}#}
+                        {#		    	{{field.label}}#}
+                        {#		    	{{field|add_class:'form-control-sm'}}#}
+                        {#		    {% endfor %}#}
+{#                        <button class="btn btn-primary" type="submit">Search</button>#}
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md">
+                <div class="card card-body">
+                    <table class="table table-sm">
+                        <tr>
+                            <th>Name</th>
+                            <th>Parking Name</th>
+                            <th>From Date</th>
+                            <th>To Date</th>
+                            <th>Slot Price</th>
+                            <th>Price</th>
+                            {#                        <th>Status</th>#}
+                            {#                        <th>Update</th>#}
+                            {#                        <th>Remove</th>#}
+                        </tr>
+                        {#                        {% for order in slot_booking %}#}
+                        {% for cus in slot_booking %}
+                            <tr>
+
+                                <td>{{ cus.customer_info.customer_name }}</td>
+                                <td>{{ cus.parking_name.space_name }}</td>
+                                <td>{{ cus.Slot_duration.from_date }}</td>
+                                <td>{{ cus.Slot_duration.to_date }}</td>
+                                <td>{{ cus.parking_name.slot_rates }}$ Per Hr</td>
+                                <td>{{ cus.total_price }}</td>
+
+                                <td></td>
+                                <td></td>
+                                {#						<td><a class="btn btn-sm btn-warning" href="{% url "accounts:update_order" order.id %}">Update</a></td>#}
+                                {#						<td><a class="btn btn-sm btn-danger" href="{% url "accounts:delete_order" order.id %}">Cancel</a></td>#}
+                            </tr>
+                        {% endfor %}
+                        {#                        {% endfor %}#}
+                    </table>
+                </div>
+            </div>
+
+        </div>         <br>
+{#        <a href="" class="btn" style="float: right;background-color: #2D71B3;color: white">Book Slot</a>#}
+
+    </div>
+
+{% endblock %}

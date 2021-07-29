@@ -1,0 +1,259 @@
+{% extends 'base_template.html' %}
+{% load static %}
+
+
+{% block content %}
+{#    {% if request.user.is_authenticated %}#}
+    <form id="theForm2" class="form-group " method="POST" action="{% url 'dashboard:savealterbooking' %}"
+          enctype="multipart/form-data">
+{#        {% else %}#}
+{#        <form id="theForm2" class="form-group " method="POST" action="{% url '/' %}"  enctype="multipart/form-data">#}
+{#    {% endif %}#}
+        {#            <form id="theForm2" class="form-group " action="{% url 'dashboard:resumeform2' %} " method="post" enctype="multipart/form-data">#}
+
+        {% csrf_token %}
+        <div class="container">
+
+
+            <h2 style="text-align: center">Complete Booking </h2>
+            <div class="row">
+
+                {% for sp in sp %}
+                    <div class="col-6">
+                        <h4 style="text-align: center">Parking Space Picture</h4>
+                        <img style="width: 100%; height: 300px" src="{{ sp.spcae_pic.url }}">
+                    </div>
+                    <div class="col-6">
+                        <h4 style="text-align: center;margin-bottom: 20px">Parking Space Details</h4>
+                        <label style="font-size: 15px;margin-bottom: 10px">Space Parking Name
+                            : </label>{{ sp.space_name }}<br>
+                        <label style="font-size: 15px;margin-bottom: 10px"> Space Address
+                            : </label>{{ sp.space_address }}<br>
+                        <label style="font-size: 15px;margin-bottom: 10px">Total Slots
+                            : </label>{{ sp.total_slots }}<br>
+                        {#                     <label style="font-size: 15px">Space Parking Name : </label>{{ sp.key_words }}<br>#}
+                        <label style="font-size: 15px;margin-bottom: 10px">Slot Rates : </label>{{ sp.slot_rates }}
+                        $<br>
+
+
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="row" style="margin-top: 30px ">
+                <div class="col-6">
+                    <h4 style="text-align: center;">Customer Details</h4>
+
+                    <label>Name:</label>
+                    <input type="text" class="form-control" placeholder="Full Name" name="cust_name" value="{{ cust_mer.customer_name }}">
+                    {#                    {{ form.customer_name }}#}
+                    <br>
+
+                    <label>Id Card n.o:</label>
+                    <input type="text" class="form-control" placeholder="Identity Number" name="cust_id_no" value="{{ cust_mer.customer_id }}">
+                    {#                    {{ form.customer_id }}#}
+                    <br>
+                    <label>Phone:</label>
+                    <input type="text" class="form-control" placeholder="Phone Number" name="cust_phone" value="{{ cust_mer.customer_phone }}">
+                    {#                    {{ form.customer_phone }}#}
+                    <br>
+
+                    <label>Email:</label>
+                    <input type="text" class="form-control" placeholder="Email Address @gmail.com" name="cust_mail" value="{{ cust_mer.customer_email }}">
+                    {#                    {{ form.customer_email }}#}
+                </div>
+
+                <div class="col-6">
+                    <h4 style="text-align: center;">Vehicle Details</h4>
+
+                    <label> Vehicle Name and Model :</label>
+                    <input type="text" class="form-control" placeholder="e.g. Ford 2005" name="vehicle_name" value="{{ cust_mer.vehicle_name }}">
+                    {#                    {{ form.vehicle_number }}#}
+                    <br>
+
+                    <label>Vehicle Number Plate:</label>
+                    <input type="text" class="form-control" placeholder="GF 20 WSN" name="vehicle_number_plate" value="{{ cust_mer.vehicle_number }}">
+                    {#                    {{ form.vehicle_name }}#}
+                    <br>
+
+                    <label>Vehicle Color:</label>
+                    <input type="text" class="form-control" placeholder="White,Blue,Black ....." name="vehicle_color" value="{{ cust_mer.vehicle_color }}">
+                    {#                    {{ form.vehicle_color }}#}
+                    <br>
+
+                    <label>Vehicle Documents:</label>
+                    <input type="file" class="form-control" name="vehicle_documents" value="{{ cust_mer.vehicle_documents }}">
+                    {#                    {{ form.vehicle_documents }}#}
+
+
+                    {#   {% for for in form1 %}#}
+                    {##}
+
+
+                    {#                    {{ form1.customer_info }}#}
+
+                    {#   {% endfor %}#}
+
+
+                </div>
+            </div>
+            <br>
+
+
+            <div class="row">
+
+                <h4 style="text-align: center;">Slot Booking</h4>
+
+                <div class="col-6">
+                    {#                    <label>Slot Name :</label>#}
+                    {##}
+                    {#                  <input type="text" class="form-control" placeholder="White,Blue,Black ....." name="vehicle_color">#}
+                    {#                    {{ form1.slot_name }}#}
+                    <br>
+
+
+                    {% for sp in sp %}
+                        <label>Total Rates: </label><br><b> ( Hours) * (Slot Rate) :</b>
+                        ({{ hours }}) x ({{ sp.slot_rates }})  = {% widthratio sp.slot_rates 1 hours %} $
+
+                    {% endfor %}
+                    {#                    {{ form1.Slot_duration }}#}
+
+                    {#                    <div class="row">#}
+                    {#                        <div class="col-1">#}
+                    {#                            <input type='text' class="form-control " placeholder="TO" disabled style="width: 45px">#}
+                    {#                        </div>#}
+                    {#                        <div class="col-4" style="margin-top: 7px;">#}
+                    {#                            {% for sd in Temp1 %}#}
+                    {#                                {% if forloop.last %}#}
+                    {#                                {{ sd.from_date_tem }}#}
+                    {#                                {% endif %}#}
+                    {#                            {% endfor %}#}
+                    {#                        </div>#}
+
+                    {#                        <div class="col-2">#}
+                    {#                            <input type='text' class="form-control " placeholder="From" disabled style="width: 60px; ">#}
+                    {#                        </div>#}
+                    {#                        <div class="col-5">#}
+                    {#                            <input class="form-control" type="datetime-local" id="to_date" name="to_date" >#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+
+
+                </div>
+                <div class="col-6"><br>
+                    {#                     <h4 style="text-align: center;">Slot Booking</h4>#}
+                    <label>Slot Duration :</label><br>
+                    <p><b>From Date : </b> {{ from_date1 }}</p>
+{#                    <input hidden type='datetime-local' name="from_date" value="{{ from_date1 }}">#}
+
+                    {#                  <input type="text" class="form-control" placeholder="White,Blue,Black ....." name="vehicle_color">#}
+
+                    <p><b>To Date : </b> {{ to_date1 }}</p>
+{#                    <input hidden type='datetime-local' name="to_date" value="{{ to_date1 }}">#}
+
+
+                    {#                  <input type="text" class="form-control" placeholder="White,Blue,Black ....." name="vehicle_color">#}
+                </div>
+
+            </div>
+            <br>
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-secondary" style="width: 20%">Book With Out Paypal Payment</button>
+            </div>
+            {#Paypal#} <br>
+            <div style="text-align: center;">
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Paypal
+                    Payment
+                </button>
+
+            </div>
+        </div>
+    </form>
+    {#   <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>#}
+    <script src="https://www.paypal.com/sdk/js?client-id=ATdoVzsapMZ3o3PTczgMdoweKfOs27xv1gLRnbwlBcdlMBWGC6fDSRujUdtlNPm6NlEGIZ6Or7kpdIOQ&currency=USD"></script>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document" style="left: -1%;transform: translate(0,0%)">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel" style="margin-left:120px ">PayPal Payment
+                        Gateway</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="paypal-button-container"></div>
+                    {#&disable-funding=credit#}
+
+                    <script>
+
+                        {% for sp  in sp %}
+                            var sr =   {{ sp.slot_rates }}
+                            var hr = {{ hours }}
+                                {#alert(sr)#}
+                                {#alert(hr)#}
+
+                                TotalHR = sr * hr
+                            {#alert(TotalHR)#}
+                        {% endfor %}
+
+                        {#var  a =   '{{ hours }}'#}
+                        {#var v = '{{ sp.slot_rates }}'#}
+                        {#c = a * v#}
+                        {#alert(c)#}
+                        // Render the PayPal button into #paypal-button-container
+
+                        {#alert(total)#}
+                        {##}
+
+
+                        paypal.Buttons({
+
+                            style: {
+                                color: 'blue',
+                                shape: 'pill',
+                                label: 'pay',
+                                height: 40,
+                            },
+                            // Set up the transaction
+                            createOrder: function (data, actions) {
+                                return actions.order.create({
+                                    purchase_units: [{
+                                        amount: {
+                                            value: TotalHR
+                                        }
+                                    }]
+                                });
+                            },
+
+                            // Finalize the transaction
+                            onApprove: function (data, actions) {
+                                return actions.order.capture().then(function (details) {
+                                    // Show a success message to the buyer
+                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                    document.getElementById('theForm2').submit();
+                                });
+                            }
+
+
+                        }).render('#paypal-button-container');
+                    </script>
+                </div>
+
+                {#                        <div class="modal-footer">#}
+                {#                            <input class="  btn btn-primary" type="submit" value="create">#}
+                {#                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>#}
+                {#                        </div>#}
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

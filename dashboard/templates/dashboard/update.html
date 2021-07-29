@@ -1,0 +1,60 @@
+{% extends 'base_template.html' %}
+{% load static %}
+
+
+{% block content %}
+    <form id="theForm2" class="form-group " method="POST" action=""
+          enctype="multipart/form-data">
+
+        {% csrf_token %}
+        <div class="container">
+
+
+            <h2 style="text-align: center">Update Customer </h2>
+
+            <div class="row" style="margin-top: 30px ">
+                <div class="col-6">
+                    <h4 style="text-align: center;">Customer Details</h4>
+
+                    <label>Name:</label>
+                    <input type="text" class="form-control" placeholder="Full Name" name="cust_name" value="{{ cust_mer.customer_name }}">
+                    <br>
+
+                    <label>Id Card n.o:</label>
+                    <input type="text" class="form-control" placeholder="Identity Number" name="cust_id_no" value="{{ cust_mer.customer_id }}">
+                    <br>
+                    <label>Phone:</label>
+                    <input type="text" class="form-control" placeholder="Phone Number" name="cust_phone" value="{{ cust_mer.customer_phone }}">
+                    <br>
+
+                    <label>Email:</label>
+                    <input type="text" class="form-control" placeholder="Email Address @gmail.com" name="cust_mail" value="{{ cust_mer.customer_email }}">
+                </div>
+
+                <div class="col-6">
+                    <h4 style="text-align: center;">Vehicle Details</h4>
+
+                    <label> Vehicle Name and Model :</label>
+                    <input type="text" class="form-control" placeholder="e.g. Ford 2005" name="vehicle_name" value="{{ cust_mer.vehicle_name }}">
+                    <br>
+
+                    <label>Vehicle Number Plate:</label>
+                    <input type="text" class="form-control" placeholder="GF 20 WSN" name="vehicle_number_plate" value="{{ cust_mer.vehicle_number }}">
+                    <br>
+
+                    <label>Vehicle Color:</label>
+                    <input type="text" class="form-control" placeholder="White,Blue,Black ....." name="vehicle_color" value="{{ cust_mer.vehicle_color }}">
+                    <br>
+
+                    <label>Vehicle Documents:</label>
+                    <input type="file" class="form-control" name="vehicle_documents" value="{{ cust_mer.vehicle_documents }}">
+
+                </div>
+            </div>
+            <br><br>
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+
+{% endblock %}

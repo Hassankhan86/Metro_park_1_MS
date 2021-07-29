@@ -1,0 +1,6 @@
+synchronous
+
+Asynchronous
+
+web sockets
+redis

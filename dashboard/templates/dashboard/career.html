@@ -1,0 +1,54 @@
+{% extends 'base_template.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container" style="margin-bottom:30px; padding-bottom:30px">
+        <p>With so many locations and such a diverse group of people working here, it can be hard to figure out where you belong. Does Metropark have the career for you? Here are some of the current job vacancies you will find at Metropark:</p>
+
+        <table class="table table-striped" style="text-align: center">
+            <thead>
+            <tr>
+                <th scope="col"  style="height:80px; text-align:center; color:darkgray" >Job Title</th>
+                <th scope="col"  style="background-color: #6ACAED; height:80px; text-align:center; color:white">Location</th>
+                <th scope="col" style="background-color: #42B3E5; height:80px; text-align:center; color:white" >Hrs/PW</th>
+                <th scope="col" style="background-color: #0384CE; height:80px; text-align:center; color:white" >Job Ref </th>
+                <th scope="col" style="background-color: #3156A3; height:80px; text-align:center; color:white" >Apply</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Area Manager</th>
+                <td>London</td>
+                <td>40</td>
+                <td>AM/LDN/03</td>
+                <td> <button onClick="job_alert()" class="btn" style="background-color:#3156A3; text-align:center; color:white">Apply</button></td>
+            </tr>
+            <tr>
+                <th scope="row">Area Manager</th>
+                <td>London</td>
+                <td>40</td>
+                <td>AM/LDN/03</td>
+                <td> <button onClick="job_alert()" class="btn" style="background-color:#3156A3; text-align:center; color:white">Apply</button></td>
+            </tr>
+            <tr>
+                <th scope="row">Area Manager</th>
+                <td>London</td>
+                <td>40</td>
+                <td>AM/LDN/03</td>
+                <td> <button onClick="job_alert()" class="btn" style="background-color:#3156A3; text-align:center; color:white">Apply</button></td>
+            </tr>
+            <tr>
+                <th scope="row">Area Manager</th>
+                <td>London</td>
+                <td>40</td>
+                <td>AM/LDN/03</td>
+                <td> <button onClick="job_alert()" class="btn" style="background-color:#3156A3; text-align:center; color:white">Apply</button></td>
+            </tr>
+
+
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}
